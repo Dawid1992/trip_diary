@@ -29,11 +29,23 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'coffee-rails', '~> 5.0'
+gem 'jquery-rails', '~> 4.4'
+gem 'sprockets', '~> 4.0', '>= 4.0.2'
 gem 'rubocop', '~> 1.22', '>= 1.22.1'
+gem 'bootstrap', '~> 5.1'
+gem 'devise', '~> 4.8'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+gem 'rest-client', '~> 2.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do

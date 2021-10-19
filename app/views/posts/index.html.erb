@@ -1,0 +1,25 @@
+<div class='container'>   
+  <div class="form-div">
+    <h1>Form</h1>
+    <%= render 'form', post: @post %>
+  </div>
+
+  <h3>Older posts</h3>
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+      <ul class="list-group">
+        <li class="list-group-item  list-group-item-dark">
+          <span class="space"><%= post.date %></span> 
+          <span class="space"><%= post.city %></span>
+          <span class="space"><%= post.temperature %>&#x2103;</span>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+        <li class="list-group-item list-group-item-light"><%= post.note %></li>
+      </ul>
+      <br>
+    <% end %>
+  <% else %>
+    <p>You have no posts so far.</p>
+  <% end %>
+</div>

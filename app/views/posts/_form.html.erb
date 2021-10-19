@@ -1,0 +1,14 @@
+<%= form_with(model: post) do |form| %>
+    <h2 class="text-dark-blue mb-3 mt-3 text-center">
+      Tell me where You are now
+    </h2>
+    <div class="mb-3 col-12">
+      <%= form.text_field :city ,:required => true, placeholder: 'City', class:"form-control" %>
+    </div>
+    <div class="mb-3 col-12">
+     <%= form.text_area :note, :required => true,placeholder: 'Note', class:"form-control" %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Save", class: "btn btn-purple col-12 mt-4 py-2" %>
+    </div>
+  <% end %>
